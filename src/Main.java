@@ -17,5 +17,6 @@ public class Main {
             System.out.println("Withdrawal refused: " + e.getMessage());
         }
         System.out.println(sara.getOwnerName() + " has " + sara.getBalance() + " MAD");
+        System.out.println(sara);
     }
 }

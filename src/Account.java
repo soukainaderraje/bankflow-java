@@ -38,6 +38,11 @@ public class Account {
         this.balance = this.balance.subtract(amount);
     }
 
+    @Override
+    public String toString() {
+        return "Account[" + accountNumber + ", " + ownerName + ", " + balance + " MAD]";
+    }
+
 }
 
 
