@@ -28,6 +28,15 @@ public class Account {
         }
         this.balance = this.balance.add(amount);
     }
+    public void withdraw(BigDecimal amount) {
+        if (amount.compareTo(BigDecimal.ZERO) <= 0) {
+            throw new IllegalArgumentException("Amount must be positive");
+        }
+        if (amount.compareTo(balance) > 0) {
+            throw new InsufficientBalanceException("Insufficient balance");
+        }
+        this.balance = this.balance.subtract(amount);
+    }
 
 }
 
